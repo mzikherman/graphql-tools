@@ -832,6 +832,7 @@ bookingById(id: "b1") {
                 vehicle {
                   ... on Bike {
                     bikeType
+                    id
                   }
                   ... on Node {
                     id
@@ -846,7 +847,7 @@ bookingById(id: "b1") {
           data: {
             customerById: {
               name: 'Exampler Customer',
-              vehicle: { bikeType: 'MOUNTAIN' },
+              vehicle: { bikeType: 'MOUNTAIN', id: 'v1' },
             },
           },
         });
