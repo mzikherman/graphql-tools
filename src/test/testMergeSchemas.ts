@@ -833,6 +833,9 @@ bookingById(id: "b1") {
                   ... on Bike {
                     bikeType
                   }
+                  ... on Node {
+                    id
+                  }
                 }
               }
             }

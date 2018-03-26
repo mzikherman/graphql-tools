@@ -469,12 +469,16 @@ const bookingRootTypeDefs = `
 
   union Vehicle = Bike | Car
 
-  type Bike {
+  type Bike implements Node {
     id: ID!
     bikeType: String
   }
 
-  type Car {
+  interface Node {
+    id: ID!
+  }
+
+  type Car implements Node {
     id: ID!
     licensePlate: String
   }
